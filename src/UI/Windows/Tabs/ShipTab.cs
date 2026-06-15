@@ -4,7 +4,7 @@ namespace MalumMenu;
 
 public class ShipTab : ITab
 {
-    public string name => "Ship";
+    public string name => "飞船";
 
     public void Draw()
     {
@@ -31,46 +31,46 @@ public class ShipTab : ITab
 
     private void DrawGeneral()
     {
-        CheatToggles.unfixableLights = GUILayout.Toggle(CheatToggles.unfixableLights, " Unfixable Lights");
+        CheatToggles.unfixableLights = GUILayout.Toggle(CheatToggles.unfixableLights, " 破坏灯光");
 
         // CheatToggles.reportBody = GUILayout.Toggle(CheatToggles.reportBody, " Report Body");
 
-        CheatToggles.callMeeting = GUILayout.Toggle(CheatToggles.callMeeting, " Call Meeting");
+        CheatToggles.callMeeting = GUILayout.Toggle(CheatToggles.callMeeting, " 召开会议");
 
-        CheatToggles.closeMeeting = GUILayout.Toggle(CheatToggles.closeMeeting, " Close Meeting");
+        CheatToggles.closeMeeting = GUILayout.Toggle(CheatToggles.closeMeeting, " 关闭会议");
 
-        CheatToggles.autoOpenDoorsOnUse = GUILayout.Toggle(CheatToggles.autoOpenDoorsOnUse, " Auto-Open Doors On Use");
+        CheatToggles.autoOpenDoorsOnUse = GUILayout.Toggle(CheatToggles.autoOpenDoorsOnUse, " 交互时自动开门");
     }
 
     private void DrawSabotage()
     {
-        GUILayout.Label("Sabotage", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("破坏", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.reactorSab = GUILayout.Toggle(CheatToggles.reactorSab, " Reactor");
+        CheatToggles.reactorSab = GUILayout.Toggle(CheatToggles.reactorSab, " 核反应堆");
 
-        CheatToggles.oxygenSab = GUILayout.Toggle(CheatToggles.oxygenSab, " Oxygen");
+        CheatToggles.oxygenSab = GUILayout.Toggle(CheatToggles.oxygenSab, " 氧气");
 
-        CheatToggles.elecSab = GUILayout.Toggle(CheatToggles.elecSab, " Lights");
+        CheatToggles.elecSab = GUILayout.Toggle(CheatToggles.elecSab, " 灯光");
 
-        CheatToggles.commsSab = GUILayout.Toggle(CheatToggles.commsSab, " Comms");
+        CheatToggles.commsSab = GUILayout.Toggle(CheatToggles.commsSab, " 通讯");
 
-        CheatToggles.showDoorsMenu = GUILayout.Toggle(CheatToggles.showDoorsMenu, " Show Doors Menu");
+        CheatToggles.showDoorsMenu = GUILayout.Toggle(CheatToggles.showDoorsMenu, " 显示门菜单");
 
-        CheatToggles.mushSab = GUILayout.Toggle(CheatToggles.mushSab, " Mushroom Mixup");
+        CheatToggles.mushSab = GUILayout.Toggle(CheatToggles.mushSab, " 蘑菇混合");
 
-        CheatToggles.mushSpore = GUILayout.Toggle(CheatToggles.mushSpore, " Trigger Spores");
+        CheatToggles.mushSpore = GUILayout.Toggle(CheatToggles.mushSpore, " 触发孢子");
 
-        CheatToggles.sabotageMap = GUILayout.Toggle(CheatToggles.sabotageMap, " Open Sabotage Map");
+        CheatToggles.sabotageMap = GUILayout.Toggle(CheatToggles.sabotageMap, " 打开破坏地图");
     }
 
     private void DrawVents()
     {
-        GUILayout.Label("Vents", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("通风管", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.unlockVents = GUILayout.Toggle(CheatToggles.unlockVents, " Unlock Vents");
+        CheatToggles.unlockVents = GUILayout.Toggle(CheatToggles.unlockVents, " 解锁通风管");
 
-        CheatToggles.kickVents = GUILayout.Toggle(CheatToggles.kickVents, " Kick All From Vents");
+        CheatToggles.kickVents = GUILayout.Toggle(CheatToggles.kickVents, " 踢出通风管内的人");
 
-        CheatToggles.walkInVents = GUILayout.Toggle(CheatToggles.walkInVents, " Walk In Vents");
+        CheatToggles.walkInVents = GUILayout.Toggle(CheatToggles.walkInVents, " 在通风管内行走");
     }
 }

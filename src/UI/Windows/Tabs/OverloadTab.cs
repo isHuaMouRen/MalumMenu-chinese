@@ -5,7 +5,7 @@ namespace MalumMenu;
 
 public class OverloadTab : ITab
 {
-    public string name => "Overload";
+    public string name => "过载";
 
     private GUIStyle _sliderSubtitle;
     private int _maxStrength = 100000;
@@ -51,14 +51,14 @@ public class OverloadTab : ITab
 
     private void DrawGeneral()
     {
-        CheatToggles.showOverload = GUILayout.Toggle(CheatToggles.showOverload, " Show Overload Menu");
+        CheatToggles.showOverload = GUILayout.Toggle(CheatToggles.showOverload, " 显示过载菜单");
     }
 
     private void DrawSettingsToggle()
     {
-        GUILayout.Label("Settings", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("设置", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.showOverloadSettings = GUILayout.Toggle(CheatToggles.showOverloadSettings, " Show Overload Settings");
+        CheatToggles.showOverloadSettings = GUILayout.Toggle(CheatToggles.showOverloadSettings, " 显示过载设置");
     }
 
     private void DrawSettingsSection()
@@ -132,15 +132,15 @@ public class OverloadTab : ITab
 
         GUILayout.BeginVertical(GUILayout.Width(MenuUI.windowWidth * 0.35f));
 
-        GUILayout.Label("General", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("通用", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.olAutoStart = GUILayout.Toggle(CheatToggles.olAutoStart, " Auto Start when Ready");
+        CheatToggles.olAutoStart = GUILayout.Toggle(CheatToggles.olAutoStart, " 准备时自动启动");
 
-        CheatToggles.olAutoStop = GUILayout.Toggle(CheatToggles.olAutoStop, " Auto Stop when Done");
+        CheatToggles.olAutoStop = GUILayout.Toggle(CheatToggles.olAutoStop, " 在完成时自动停止");
 
-        CheatToggles.olLockTargets = GUILayout.Toggle(CheatToggles.olLockTargets, " Lock Targets on Start");
+        CheatToggles.olLockTargets = GUILayout.Toggle(CheatToggles.olLockTargets, " 在启动时锁定目标");
 
-        CheatToggles.olKillSwitch = GUILayout.Toggle(CheatToggles.olKillSwitch, " Kill Switch on Lag");
+        CheatToggles.olKillSwitch = GUILayout.Toggle(CheatToggles.olKillSwitch, " 网络延迟时停止");
 
         if (CheatToggles.olKillSwitch)
         {
@@ -167,19 +167,19 @@ public class OverloadTab : ITab
 
         GUILayout.BeginVertical();
 
-        GUILayout.Label("Logs", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("日志", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.olLogStartStop = GUILayout.Toggle(CheatToggles.olLogStartStop, " Log START and STOP");
+        CheatToggles.olLogStartStop = GUILayout.Toggle(CheatToggles.olLogStartStop, " 记录开始和停止");
 
-        CheatToggles.olLogAddRemove = GUILayout.Toggle(CheatToggles.olLogAddRemove, " Log ADD and REMOVE");
+        CheatToggles.olLogAddRemove = GUILayout.Toggle(CheatToggles.olLogAddRemove, " 记录添加或移除");
 
-        CheatToggles.olLogAttack = GUILayout.Toggle(CheatToggles.olLogAttack, " Log Attack");
+        CheatToggles.olLogAttack = GUILayout.Toggle(CheatToggles.olLogAttack, " 记录攻击");
 
-        CheatToggles.olLogDisconnect = GUILayout.Toggle(CheatToggles.olLogDisconnect, " Log Disconnect");
+        CheatToggles.olLogDisconnect = GUILayout.Toggle(CheatToggles.olLogDisconnect, " 记录断连");
 
-        CheatToggles.olVerboseLogs = GUILayout.Toggle(CheatToggles.olVerboseLogs, " Verbose Attack Logs");
+        CheatToggles.olVerboseLogs = GUILayout.Toggle(CheatToggles.olVerboseLogs, " 详细攻击日志");
 
-        CheatToggles.olAutoClear = GUILayout.Toggle(CheatToggles.olAutoClear, " Auto Clear on Start");
+        CheatToggles.olAutoClear = GUILayout.Toggle(CheatToggles.olAutoClear, " 在开始时自动清理日志");
 
         GUILayout.EndVertical();
 

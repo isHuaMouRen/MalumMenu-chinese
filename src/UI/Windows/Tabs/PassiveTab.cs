@@ -4,7 +4,7 @@ namespace MalumMenu;
 
 public class PassiveTab : ITab
 {
-    public string name => "Passive";
+    public string name => "无害";
 
     public void Draw()
     {
@@ -17,14 +17,14 @@ public class PassiveTab : ITab
 
     private void DrawGeneral()
     {
-        CheatToggles.freeCosmetics = GUILayout.Toggle(CheatToggles.freeCosmetics, " Free Cosmetics");
+        CheatToggles.freeCosmetics = GUILayout.Toggle(CheatToggles.freeCosmetics, " 免费服饰");
 
-        CheatToggles.avoidPenalties = GUILayout.Toggle(CheatToggles.avoidPenalties, " Avoid Penalties");
+        CheatToggles.avoidPenalties = GUILayout.Toggle(CheatToggles.avoidPenalties, " 避免处罚");
 
-        CheatToggles.unlockFeatures = GUILayout.Toggle(CheatToggles.unlockFeatures, " Unlock Extra Features");
+        CheatToggles.unlockFeatures = GUILayout.Toggle(CheatToggles.unlockFeatures, " 解锁额外功能");
 
-        CheatToggles.copyLobbyCodeOnDisconnect = GUILayout.Toggle(CheatToggles.copyLobbyCodeOnDisconnect, " Copy Lobby Code on Disconnect");
+        CheatToggles.copyLobbyCodeOnDisconnect = GUILayout.Toggle(CheatToggles.copyLobbyCodeOnDisconnect, " 在断开连接时复制房间码");
 
-        CheatToggles.spoofAprilFoolsDate = GUILayout.Toggle(CheatToggles.spoofAprilFoolsDate, " Spoof Date to April 1st");
+        CheatToggles.spoofAprilFoolsDate = GUILayout.Toggle(CheatToggles.spoofAprilFoolsDate, " 愚人节为4月1日");
     }
 }

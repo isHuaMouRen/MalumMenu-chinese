@@ -4,7 +4,7 @@ namespace MalumMenu;
 
 public class RolesTab : ITab
 {
-    public string name => "Roles";
+    public string name => "身份";
 
     public void Draw()
     {
@@ -51,71 +51,71 @@ public class RolesTab : ITab
 
     private void DrawGeneral()
     {
-        CheatToggles.setFakeRole = GUILayout.Toggle(CheatToggles.setFakeRole, " Set Fake Role");
+        CheatToggles.setFakeRole = GUILayout.Toggle(CheatToggles.setFakeRole, " 设置假身份");
 
-        CheatToggles.setFakeAlive = GUILayout.Toggle(CheatToggles.setFakeAlive, " Set Fake Alive");
+        CheatToggles.setFakeAlive = GUILayout.Toggle(CheatToggles.setFakeAlive, " 设置假存活状态");
     }
 
     private void DrawImpostor()
     {
-        GUILayout.Label("Impostor", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("伪装者", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.killReach = GUILayout.Toggle(CheatToggles.killReach, " Kill Reach");
+        CheatToggles.killReach = GUILayout.Toggle(CheatToggles.killReach, " 远距离击杀");
 
         // CheatToggles.impostorTasks = GUILayout.Toggle(CheatToggles.impostorTasks, " Allow Tasks");
     }
 
     private void DrawShapeshifter()
     {
-        GUILayout.Label("Shapeshifter", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("变形者", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.noShapeshiftAnim = GUILayout.Toggle(CheatToggles.noShapeshiftAnim, " No Ss Animation");
+        CheatToggles.noShapeshiftAnim = GUILayout.Toggle(CheatToggles.noShapeshiftAnim, " 无变形动画");
 
-        CheatToggles.endlessSsDuration = GUILayout.Toggle(CheatToggles.endlessSsDuration, " Endless Ss Duration");
+        CheatToggles.endlessSsDuration = GUILayout.Toggle(CheatToggles.endlessSsDuration, " 无限变身时长");
     }
 
     private void DrawCrewmate()
     {
-        GUILayout.Label("Crewmate", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("船员", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.showTasksMenu = GUILayout.Toggle(CheatToggles.showTasksMenu, " Show Tasks Menu");
+        CheatToggles.showTasksMenu = GUILayout.Toggle(CheatToggles.showTasksMenu, " 显示任务菜单");
     }
 
     private void DrawTracker()
     {
-        GUILayout.Label("Tracker", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("侦查员", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.endlessTracking = GUILayout.Toggle(CheatToggles.endlessTracking, " Endless Tracking");
+        CheatToggles.endlessTracking = GUILayout.Toggle(CheatToggles.endlessTracking, " 无限侦查");
 
-        CheatToggles.noTrackingDelay = GUILayout.Toggle(CheatToggles.noTrackingDelay, " No Track Delay");
+        CheatToggles.noTrackingDelay = GUILayout.Toggle(CheatToggles.noTrackingDelay, " 无侦查延迟");
 
-        CheatToggles.noTrackingCooldown = GUILayout.Toggle(CheatToggles.noTrackingCooldown, " No Track Cooldown");
+        CheatToggles.noTrackingCooldown = GUILayout.Toggle(CheatToggles.noTrackingCooldown, " 无侦查冷却");
 
-        CheatToggles.trackReach = GUILayout.Toggle(CheatToggles.trackReach, " Track Reach");
+        CheatToggles.trackReach = GUILayout.Toggle(CheatToggles.trackReach, " 远距离侦查");
     }
 
     private void DrawEngineer()
     {
-        GUILayout.Label("Engineer", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("工程师", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.endlessVentTime = GUILayout.Toggle(CheatToggles.endlessVentTime, " Endless Vent Time");
+        CheatToggles.endlessVentTime = GUILayout.Toggle(CheatToggles.endlessVentTime, " 无限通风管时间");
 
-        CheatToggles.noVentCooldown = GUILayout.Toggle(CheatToggles.noVentCooldown, " No Vent Cooldown");
+        CheatToggles.noVentCooldown = GUILayout.Toggle(CheatToggles.noVentCooldown, " 无通风管冷却");
     }
 
     private void DrawScientist()
     {
-        GUILayout.Label("Scientist", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("科学家", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.endlessBattery = GUILayout.Toggle(CheatToggles.endlessBattery, " Endless Battery");
+        CheatToggles.endlessBattery = GUILayout.Toggle(CheatToggles.endlessBattery, " 无限电池");
 
-        CheatToggles.noVitalsCooldown = GUILayout.Toggle(CheatToggles.noVitalsCooldown, " No Vitals Cooldown");
+        CheatToggles.noVitalsCooldown = GUILayout.Toggle(CheatToggles.noVitalsCooldown, " 无冷却");
     }
 
     private void DrawDetective()
     {
-        GUILayout.Label("Detective", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("侦探", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.interrogateReach = GUILayout.Toggle(CheatToggles.interrogateReach, " Interrogate Reach");
+        CheatToggles.interrogateReach = GUILayout.Toggle(CheatToggles.interrogateReach, " 远距离审问");
     }
 }

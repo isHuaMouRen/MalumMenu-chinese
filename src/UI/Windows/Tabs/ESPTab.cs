@@ -35,59 +35,59 @@ public class ESPTab : ITab
 
     private void DrawGeneral()
     {
-        CheatToggles.seePlayerInfo = GUILayout.Toggle(CheatToggles.seePlayerInfo, " See Player Info");
+        CheatToggles.seePlayerInfo = GUILayout.Toggle(CheatToggles.seePlayerInfo, " 查看玩家信息");
 
-        CheatToggles.seeRoles = GUILayout.Toggle(CheatToggles.seeRoles, " See Roles");
+        CheatToggles.seeRoles = GUILayout.Toggle(CheatToggles.seeRoles, " 查看身份");
 
-        CheatToggles.seeGhosts = GUILayout.Toggle(CheatToggles.seeGhosts, " See Ghosts");
+        CheatToggles.seeGhosts = GUILayout.Toggle(CheatToggles.seeGhosts, " 幽灵可视");
 
-        CheatToggles.noShadows = GUILayout.Toggle(CheatToggles.noShadows, " No Shadows");
+        CheatToggles.noShadows = GUILayout.Toggle(CheatToggles.noShadows, " 无阴影");
 
-        CheatToggles.taskArrows = GUILayout.Toggle(CheatToggles.taskArrows, " Task Arrows");
+        CheatToggles.taskArrows = GUILayout.Toggle(CheatToggles.taskArrows, " 任务箭头");
 
-        CheatToggles.revealVotes = GUILayout.Toggle(CheatToggles.revealVotes, " Reveal Votes");
+        CheatToggles.revealVotes = GUILayout.Toggle(CheatToggles.revealVotes, " 可视投票");
 
-        CheatToggles.seeLobbyInfo = GUILayout.Toggle(CheatToggles.seeLobbyInfo, " See Lobby Info");
+        CheatToggles.seeLobbyInfo = GUILayout.Toggle(CheatToggles.seeLobbyInfo, " 查看房间信息");
     }
 
     private void DrawCamera()
     {
-        GUILayout.Label("Camera", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("相机", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.zoomOut = GUILayout.Toggle(CheatToggles.zoomOut, " Zoom Out");
+        CheatToggles.zoomOut = GUILayout.Toggle(CheatToggles.zoomOut, " 缩放");
 
-        CheatToggles.spectate = GUILayout.Toggle(CheatToggles.spectate, " Spectate");
+        CheatToggles.spectate = GUILayout.Toggle(CheatToggles.spectate, " 观察者");
 
-        CheatToggles.freecam = GUILayout.Toggle(CheatToggles.freecam, " Freecam");
+        CheatToggles.freecam = GUILayout.Toggle(CheatToggles.freecam, " 自由视角");
     }
 
     private void DrawTracers()
     {
-        GUILayout.Label("Tracers", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("射线", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.tracersCrew = GUILayout.Toggle(CheatToggles.tracersCrew, " Crewmates");
+        CheatToggles.tracersCrew = GUILayout.Toggle(CheatToggles.tracersCrew, " 船员");
 
-        CheatToggles.tracersImps = GUILayout.Toggle(CheatToggles.tracersImps, " Impostors");
+        CheatToggles.tracersImps = GUILayout.Toggle(CheatToggles.tracersImps, " 伪装者");
 
-        CheatToggles.tracersGhosts = GUILayout.Toggle(CheatToggles.tracersGhosts, " Ghosts");
+        CheatToggles.tracersGhosts = GUILayout.Toggle(CheatToggles.tracersGhosts, " 幽灵");
 
-        CheatToggles.tracersBodies = GUILayout.Toggle(CheatToggles.tracersBodies, " Dead Bodies");
+        CheatToggles.tracersBodies = GUILayout.Toggle(CheatToggles.tracersBodies, " 尸体");
 
-        CheatToggles.colorBasedTracers = GUILayout.Toggle(CheatToggles.colorBasedTracers, " Color-based");
+        CheatToggles.colorBasedTracers = GUILayout.Toggle(CheatToggles.colorBasedTracers, " 根据颜色区分");
 
-        CheatToggles.distanceBasedTracers = GUILayout.Toggle(CheatToggles.distanceBasedTracers, " Distance-based");
+        CheatToggles.distanceBasedTracers = GUILayout.Toggle(CheatToggles.distanceBasedTracers, " 根据距离区分");
     }
 
     private void DrawMinimap()
     {
-        GUILayout.Label("Minimap", GUIStylePreset.TabSubtitle);
+        GUILayout.Label("小地图", GUIStylePreset.TabSubtitle);
 
-        CheatToggles.mapCrew = GUILayout.Toggle(CheatToggles.mapCrew, " Crewmates");
+        CheatToggles.mapCrew = GUILayout.Toggle(CheatToggles.mapCrew, " 船员");
 
-        CheatToggles.mapImps = GUILayout.Toggle(CheatToggles.mapImps, " Impostors");
+        CheatToggles.mapImps = GUILayout.Toggle(CheatToggles.mapImps, " 内鬼");
 
-        CheatToggles.mapGhosts = GUILayout.Toggle(CheatToggles.mapGhosts, " Ghosts");
+        CheatToggles.mapGhosts = GUILayout.Toggle(CheatToggles.mapGhosts, " 幽灵");
 
-        CheatToggles.colorBasedMap = GUILayout.Toggle(CheatToggles.colorBasedMap, " Color-based");
+        CheatToggles.colorBasedMap = GUILayout.Toggle(CheatToggles.colorBasedMap, " 根据颜色区分");
     }
 }

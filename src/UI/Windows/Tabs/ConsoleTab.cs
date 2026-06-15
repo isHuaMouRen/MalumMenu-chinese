@@ -4,7 +4,7 @@ namespace MalumMenu;
 
 public class ConsoleTab : ITab
 {
-    public string name => "Console";
+    public string name => "控制台";
 
     public void Draw()
     {
@@ -17,12 +17,12 @@ public class ConsoleTab : ITab
 
     private void DrawGeneral()
     {
-        CheatToggles.showConsole = GUILayout.Toggle(CheatToggles.showConsole, " Show Console");
+        CheatToggles.showConsole = GUILayout.Toggle(CheatToggles.showConsole, " 显示控制台");
 
-        CheatToggles.logDeaths = GUILayout.Toggle(CheatToggles.logDeaths, " Log Deaths");
+        CheatToggles.logDeaths = GUILayout.Toggle(CheatToggles.logDeaths, " 记录死亡日志");
 
-        CheatToggles.logShapeshifts = GUILayout.Toggle(CheatToggles.logShapeshifts, " Log Shapeshifts");
+        CheatToggles.logShapeshifts = GUILayout.Toggle(CheatToggles.logShapeshifts, " 记录变形日志");
 
-        CheatToggles.logVents = GUILayout.Toggle(CheatToggles.logVents, " Log Vents");
+        CheatToggles.logVents = GUILayout.Toggle(CheatToggles.logVents, " 记录通风管日志");
     }
 }
