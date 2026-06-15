@@ -27,7 +27,7 @@ public class RolesUI : MonoBehaviour
 
         UIHelpers.ApplyUIColor();
 
-        _windowRect = GUI.Window((int)WindowId.RolesUI, _windowRect, (GUI.WindowFunction)RolesWindow, "Assign Roles");
+        _windowRect = GUI.Window((int)WindowId.RolesUI, _windowRect, (GUI.WindowFunction)RolesWindow, "分配身份");
     }
 
     private void RolesWindow(int windowID)
@@ -47,11 +47,11 @@ public class RolesUI : MonoBehaviour
             GUILayout.Label($"{CheatToggles.forcedRole}");
             GUILayout.FlexibleSpace();
 
-            if (GUILayout.Button("Reset", GUILayout.Width(80f)))
+            if (GUILayout.Button("重置", GUILayout.Width(80f)))
             {
                 CheatToggles.forcedRole = null;
             }
-            if (GUILayout.Button("Assign", GUILayout.Width(80f)))
+            if (GUILayout.Button("分配", GUILayout.Width(80f)))
             {
                 CheatToggles.forceRole = true;
             }
@@ -62,7 +62,7 @@ public class RolesUI : MonoBehaviour
 
         GUILayout.EndScrollView();
         GUILayout.EndVertical();
-        GUILayout.Label("Roles will be assigned on next game start");
+        GUILayout.Label("下一场游戏开始时将分配身份");
         GUI.DragWindow();
     }
 }
