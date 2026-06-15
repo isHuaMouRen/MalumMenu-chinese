@@ -146,7 +146,7 @@ public class OverloadUI : MonoBehaviour
 
         UIHelpers.ApplyUIColor();
 
-        _windowRect = GUI.Window((int)WindowId.OverloadUI, _windowRect, (GUI.WindowFunction)OverloadWindow, "Overload");
+        _windowRect = GUI.Window((int)WindowId.OverloadUI, _windowRect, (GUI.WindowFunction)OverloadWindow, "过载");
     }
 
     private void OverloadWindow(int windowID)
@@ -390,19 +390,19 @@ public class OverloadUI : MonoBehaviour
 
     private void DrawSelectionToggles()
     {
-        bool newOverloadAll = GUILayout.Toggle(CheatToggles.overloadAll, " All");
+        bool newOverloadAll = GUILayout.Toggle(CheatToggles.overloadAll, " 所有人");
         CheatToggles.overloadAll = _areTargetsUnlocked ? newOverloadAll : false;
 
-        bool newOverloadHost = GUILayout.Toggle(CheatToggles.overloadHost, " Host");
+        bool newOverloadHost = GUILayout.Toggle(CheatToggles.overloadHost, " 主持人");
         CheatToggles.overloadHost = _areTargetsUnlocked ? newOverloadHost : false;
 
-        bool newOverloadCrew = GUILayout.Toggle(CheatToggles.overloadCrew, " Crewmates");
+        bool newOverloadCrew = GUILayout.Toggle(CheatToggles.overloadCrew, " 船员");
         CheatToggles.overloadCrew = _areTargetsUnlocked ? newOverloadCrew : false;
 
-        bool newOverloadImps = GUILayout.Toggle(CheatToggles.overloadImps, " Impostors");
+        bool newOverloadImps = GUILayout.Toggle(CheatToggles.overloadImps, " 伪装者");
         CheatToggles.overloadImps = _areTargetsUnlocked ? newOverloadImps : false;
 
-        bool newOverloadReset = GUILayout.Toggle(CheatToggles.overloadReset, " Reset");
+        bool newOverloadReset = GUILayout.Toggle(CheatToggles.overloadReset, " 重置");
         CheatToggles.overloadReset = _areTargetsUnlocked ? newOverloadReset : false;
     }
 
@@ -415,7 +415,7 @@ public class OverloadUI : MonoBehaviour
         Color startBackgroundColor = Color.green;
         GUI.backgroundColor = startEnabled ? startBackgroundColor : Color.black;
 
-        if (GUILayout.Button("START", GUILayout.Width(140f)) && startEnabled)
+        if (GUILayout.Button("开始！", GUILayout.Width(140f)) && startEnabled)
         {
             StartOverload();
         }
@@ -429,7 +429,7 @@ public class OverloadUI : MonoBehaviour
         Color stopBackgroundColor = Color.red;
         GUI.backgroundColor = stopEnabled ? stopBackgroundColor : Color.black;
 
-        if (GUILayout.Button("STOP", GUILayout.Width(140f)) && stopEnabled)
+        if (GUILayout.Button("停止", GUILayout.Width(140f)) && stopEnabled)
         {
             StopOverload();
         }
@@ -452,11 +452,11 @@ public class OverloadUI : MonoBehaviour
             if (currentTargets.Count > 0)
             {
                 string pluralStr = currentTargets.Count != 1 ? "s" : "";
-                middleStr = $"Attacking {currentTargets.Count} target{pluralStr}";
+                middleStr = $"正在攻击 {currentTargets.Count} 目标{pluralStr}";
             }
             else
             {
-                middleStr = "Idle";
+                middleStr = "空闲";
             }
 
             GUILayout.Label($"{firstStr}{middleStr}{finalStr}");
@@ -490,7 +490,7 @@ public class OverloadUI : MonoBehaviour
 
         GUILayout.BeginHorizontal(GUILayout.ExpandWidth(false));
 
-        if (GUILayout.Button("Clear Log"))
+        if (GUILayout.Button("清理日志"))
         {
             _logEntries.Clear();
         }
