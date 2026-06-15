@@ -30,7 +30,7 @@ public class ProtectUI : MonoBehaviour
 
         UIHelpers.ApplyUIColor();
 
-        _windowRect = GUI.Window((int)WindowId.ProtectUI, _windowRect, (GUI.WindowFunction)ProtectWindow, "Protect Players");
+        _windowRect = GUI.Window((int)WindowId.ProtectUI, _windowRect, (GUI.WindowFunction)ProtectWindow, "保护玩家");
     }
 
     private void ProtectWindow(int windowID)
@@ -71,7 +71,7 @@ public class ProtectUI : MonoBehaviour
             }
 
             var keepProtected = playersToProtect.Contains(player);
-            keepProtected = GUILayout.Toggle(keepProtected, "Keep protected", GUIStylePreset.NormalToggle);
+            keepProtected = GUILayout.Toggle(keepProtected, "保持保护", GUIStylePreset.NormalToggle);
 
             if (keepProtected && !playersToProtect.Contains(player))
             {
@@ -89,7 +89,7 @@ public class ProtectUI : MonoBehaviour
 
         GUILayout.BeginHorizontal();
 
-        if (GUILayout.Button("Protect Everyone") && Utils.isHost && !Utils.isLobby)
+        if (GUILayout.Button("保护所有人") && Utils.isHost && !Utils.isLobby)
         {
             foreach (var player in PlayerControl.AllPlayerControls)
             {
@@ -99,7 +99,7 @@ public class ProtectUI : MonoBehaviour
 
         GUILayout.FlexibleSpace();
 
-        _keepEveryoneProtected = GUILayout.Toggle(_keepEveryoneProtected, "Keep Everyone Protected");
+        _keepEveryoneProtected = GUILayout.Toggle(_keepEveryoneProtected, "保持所有人保护");
 
         if (_keepEveryoneProtected)
         {
