@@ -57,12 +57,12 @@ public class ConsoleUI : MonoBehaviour
 
         GUILayout.BeginHorizontal();
 
-        if (GUILayout.Button("Clear Log", GUILayout.Width(260)))
+        if (GUILayout.Button("清除日志", GUILayout.Width(260)))
         {
             _logEntries.Clear();
         }
 
-        if (GUILayout.Button("Copy Log to Clipboard"))
+        if (GUILayout.Button("复制日志到剪贴板"))
         {
             GUIUtility.systemCopyBuffer = String.Join("\n", _logEntries.ToArray());
         }
