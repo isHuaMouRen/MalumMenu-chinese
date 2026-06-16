@@ -648,6 +648,7 @@ public static class Utils
         var background = popup.transform.Find("Background").GetComponent<SpriteRenderer>();
         var size = background.size;
         size.x *= 2.5f;
+        size.y *= 1.5f;
         background.size = size;
 
         popup.TextAreaTMP.fontSizeMin = 2;

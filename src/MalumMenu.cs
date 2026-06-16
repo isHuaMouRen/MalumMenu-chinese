@@ -226,7 +226,7 @@ public partial class MalumMenu : BasePlugin
                     var temp = "";
                     foreach (var item in supportedAU)
                         temp = $"{temp}{item} ";
-                    Utils.ShowPopup($"\n此版本的 MalumMenu 与此版本的 Among Us 不兼容\n\n安装正确的版本以避免问题\n\nAmongUs版本: {Application.version}\nMalumMenu版本: {temp}");
+                    Utils.ShowPopup($"\n此版本的 MalumMenu 与此版本的 Among Us 不兼容\n安装正确的版本以避免问题\nAmongUs版本: {Application.version}   MalumMenu版本: {temp}");
                 }
             }
         }));
