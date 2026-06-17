@@ -37,11 +37,11 @@ public static class Vent_EnterVent
 
         var (realPlayerName, displayPlayerName, isDisguised) = Utils.GetPlayerIdentity(pc);
         var room = Utils.GetRoomFromPosition(__instance.transform.position); //- (Vector3) pc.Collider.offset);
-        var roomName = room != null ? room.RoomId.ToString() : "an unknown location";
+        var roomName = room != null ? room.RoomId.ToString() : "未知位置";
 
         ConsoleUI.Log(isDisguised
-            ? $"{realPlayerName} (as {displayPlayerName}) entered a vent in {roomName}"
-            : $"{realPlayerName} entered a vent in {roomName}");
+            ? $"{realPlayerName} (以 {displayPlayerName}) 在 {roomName} 进入了通风管"
+            : $"{realPlayerName} 在 {roomName} 进入了通风管");
     }
 }
 
@@ -57,10 +57,10 @@ public static class Vent_ExitVent
         var (realPlayerName, displayPlayerName, isDisguised) = Utils.GetPlayerIdentity(pc);
 
         var room = Utils.GetRoomFromPosition(__instance.transform.position); //- (Vector3) pc.Collider.offset);
-        var roomName = room != null ? room.RoomId.ToString() : "an unknown location";
+        var roomName = room != null ? room.RoomId.ToString() : "未知位置";
 
         ConsoleUI.Log(isDisguised
-            ? $"{realPlayerName} (as {displayPlayerName}) exited a vent in {roomName}"
-            : $"{realPlayerName} exited a vent in {roomName}");
+            ? $"{realPlayerName} (以 {displayPlayerName}) 在 {roomName} 离开了通风管"
+            : $"{realPlayerName} 在 {roomName} 离开了通风管");
     }
 }

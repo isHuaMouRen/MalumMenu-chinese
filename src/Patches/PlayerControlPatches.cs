@@ -68,17 +68,17 @@ public static class PlayerControl_MurderPlayer
         var targetName = $"<color=#{ColorUtility.ToHtmlStringRGB(target.Data.Color)}>{target.CurrentOutfit.PlayerName}</color>";
 
         var room = Utils.GetRoomFromPosition(target.GetTruePosition());
-        var roomName = room != null ? room.RoomId.ToString() : "an unknown location";
+        var roomName = room != null ? room.RoomId.ToString() : "未知未知";
 
         if (target.protectedByGuardianId != -1)
         {
-            ConsoleUI.Log(isDisguised ? $"{realKillerName} (as {displayKillerName}) tried to kill {targetName} in {roomName} (Protected)"
-                : $"{realKillerName} tried to kill {targetName} in {roomName} (Protected)");
+            ConsoleUI.Log(isDisguised ? $"{realKillerName} (以 {displayKillerName}) 试图杀死 {targetName} 在 {roomName} (已保护)"
+                : $"{realKillerName} 试图杀死 {targetName} 在 {roomName} (已保护)");
         }
         else
         {
-            ConsoleUI.Log(isDisguised ? $"{realKillerName} (as {displayKillerName}) killed {targetName} in {roomName}"
-                : $"{realKillerName} killed {targetName} in {roomName}");
+            ConsoleUI.Log(isDisguised ? $"{realKillerName} (以 {displayKillerName}) 杀死 {targetName} 在 {roomName}"
+                : $"{realKillerName} 杀死 {targetName} 在 {roomName}");
         }
     }
 }
@@ -136,19 +136,19 @@ public static class PlayerControl_Shapeshift
         var targetPlayerInfo = targetPlayer.Data;
 
         var room = Utils.GetRoomFromPosition(__instance.GetTruePosition());
-        var roomName = room != null ? room.RoomId.ToString() : "an unknown location";
+        var roomName = room != null ? room.RoomId.ToString() : "未知位置";
 
         if (targetPlayerInfo.PlayerId == __instance.Data.PlayerId)
         {
             ConsoleUI.Log($"<color=#{ColorUtility.ToHtmlStringRGB(GameData.Instance.GetPlayerById(__instance.PlayerId).Color)}>" +
-                          $"{GameData.Instance.GetPlayerById(__instance.PlayerId)._object.Data.PlayerName}</color> undid their shapeshift in {roomName}");
+                          $"{GameData.Instance.GetPlayerById(__instance.PlayerId)._object.Data.PlayerName}</color> 在 {roomName} 中变形");
         }
         else
         {
             ConsoleUI.Log($"<color=#{ColorUtility.ToHtmlStringRGB(GameData.Instance.GetPlayerById(__instance.PlayerId).Color)}>" +
-                          $"{GameData.Instance.GetPlayerById(__instance.PlayerId)._object.Data.PlayerName}</color> shapeshifted into " +
+                          $"{GameData.Instance.GetPlayerById(__instance.PlayerId)._object.Data.PlayerName}</color> 变形为 " +
                           $"<color=#{ColorUtility.ToHtmlStringRGB(GameData.Instance.GetPlayerById(targetPlayerInfo.PlayerId).Color)}>" +
-                          $"{GameData.Instance.GetPlayerById(targetPlayerInfo.PlayerId)._object.Data.PlayerName}</color> in {roomName}");
+                          $"{GameData.Instance.GetPlayerById(targetPlayerInfo.PlayerId)._object.Data.PlayerName}</color> 在 {roomName}");
         }
     }
 }
