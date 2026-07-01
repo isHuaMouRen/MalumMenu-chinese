@@ -39,6 +39,8 @@ public class ShipTab : ITab
 
         CheatToggles.closeMeeting = GUILayout.Toggle(CheatToggles.closeMeeting, " 关闭会议");
 
+        CheatToggles.autoReportBodies = GUILayout.Toggle(CheatToggles.autoReportBodies, " 自动报告尸体");
+
         CheatToggles.autoOpenDoorsOnUse = GUILayout.Toggle(CheatToggles.autoOpenDoorsOnUse, " 交互时自动开门");
     }
 
