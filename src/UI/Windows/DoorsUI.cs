@@ -78,7 +78,7 @@ public class DoorsUI : MonoBehaviour
             if (Utils.isHost)
             {
                 var spamClose = _doorsToSpamClose.Contains(doorRoom);
-                spamClose = GUILayout.Toggle(spamClose, "Spam Close", GUIStylePreset.NormalToggle);
+                spamClose = GUILayout.Toggle(spamClose, "混乱关闭", GUIStylePreset.NormalToggle);
                 //垃圾邮件关闭？
 
                 if (spamClose && !_doorsToSpamClose.Contains(doorRoom))
@@ -93,7 +93,7 @@ public class DoorsUI : MonoBehaviour
                 if (map is MapNames.Polus or MapNames.Airship or MapNames.Fungle)
                 {
                     var spamOpen = _doorsToSpamOpen.Contains(doorRoom);
-                    spamOpen = GUILayout.Toggle(spamOpen, "Spam Open", GUIStylePreset.NormalToggle);
+                    spamOpen = GUILayout.Toggle(spamOpen, "混乱打开", GUIStylePreset.NormalToggle);
                     //垃圾邮件打开？
 
                     if (spamOpen && !_doorsToSpamOpen.Contains(doorRoom))
@@ -145,12 +145,12 @@ public class DoorsUI : MonoBehaviour
 
         if (Utils.isHost)
         {
-            CheatToggles.spamCloseAllDoors = GUILayout.Toggle(CheatToggles.spamCloseAllDoors, "Spam Close All", GUIStylePreset.NormalToggle);
+            CheatToggles.spamCloseAllDoors = GUILayout.Toggle(CheatToggles.spamCloseAllDoors, "混乱关闭所有", GUIStylePreset.NormalToggle);
             //垃圾邮件关闭所有？
 
             if (map is MapNames.Polus or MapNames.Airship or MapNames.Fungle)
             {
-                CheatToggles.spamOpenAllDoors = GUILayout.Toggle(CheatToggles.spamOpenAllDoors, "Spam Open All", GUIStylePreset.NormalToggle);
+                CheatToggles.spamOpenAllDoors = GUILayout.Toggle(CheatToggles.spamOpenAllDoors, "混乱打开所有", GUIStylePreset.NormalToggle);
                 //垃圾邮件打开所有
             }
         }

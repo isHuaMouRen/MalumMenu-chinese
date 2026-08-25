@@ -4,7 +4,7 @@ namespace MalumMenu;
 
 public class HostOnlyTab : ITab
 {
-    public string name => "仅主持人";
+    public string name => "主持人";
 
     public void Draw()
     {

@@ -57,15 +57,15 @@ public class ProtectUI : MonoBehaviour
 
             if (player.protectedByGuardianId == -1)
             {
-                GUILayout.Label("<color=#FF0000>Unprotected</color>", GUILayout.Width(135));
+                GUILayout.Label("<color=#FF0000>无保护</color>", GUILayout.Width(135));
             }
             else
             {
                 NetworkedPlayerInfo guardianInfo = GameData.Instance.GetPlayerById((byte)player.protectedByGuardianId);
-                GUILayout.Label($"<color=#00FF00>Protected</color> by <color=#{ColorUtility.ToHtmlStringRGB(guardianInfo.Color)}>{guardianInfo._object.Data.PlayerName}</color>", GUILayout.Width(135));
+                GUILayout.Label($"<color=#00FF00>已保护</color> by <color=#{ColorUtility.ToHtmlStringRGB(guardianInfo.Color)}>{guardianInfo._object.Data.PlayerName}</color>", GUILayout.Width(135));
             }
 
-            if (GUILayout.Button("Protect", GUIStylePreset.NormalButton) && Utils.isHost && !Utils.isLobby)
+            if (GUILayout.Button("保护", GUIStylePreset.NormalButton) && Utils.isHost && !Utils.isLobby)
             {
                 PlayerControl.LocalPlayer.RpcProtectPlayer(player, player.cosmetics.ColorId);
             }

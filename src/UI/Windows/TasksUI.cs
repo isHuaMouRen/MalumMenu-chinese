@@ -102,7 +102,7 @@ public class TasksUI : MonoBehaviour
 
                     if (task.IsComplete)
                     {
-                        GUILayout.Label("<color=#00ff00>✔ Complete</color>");
+                        GUILayout.Label("<color=#00ff00>✔ 已完成</color>");
                     }
                     else
                     {
