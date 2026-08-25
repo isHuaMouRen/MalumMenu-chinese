@@ -14,7 +14,7 @@ public class OverloadUI : MonoBehaviour
     private bool _areTargetsUnlocked => !CheatToggles.runOverload || !CheatToggles.olLockTargets;
     private bool _hasAutoStarted;
 
-    private Rect _windowRect = new(320, 10, 595, 500);
+    public static Rect windowRect = new(320, 10, 595, 500);
     private GUIStyle _targetButtonStyle;
     private GUIStyle _normalButtonStyle;
     private GUIStyle _logStyle;
@@ -146,7 +146,7 @@ public class OverloadUI : MonoBehaviour
 
         UIHelpers.ApplyUIColor();
 
-        _windowRect = GUI.Window((int)WindowId.OverloadUI, _windowRect, (GUI.WindowFunction)OverloadWindow, "过载");
+        windowRect = GUI.Window((int)WindowId.OverloadUI, windowRect, (GUI.WindowFunction)OverloadWindow, "过载");
     }
 
     private void OverloadWindow(int windowID)

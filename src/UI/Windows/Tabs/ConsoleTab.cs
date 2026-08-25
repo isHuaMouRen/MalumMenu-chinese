@@ -23,6 +23,10 @@ public class ConsoleTab : ITab
 
         CheatToggles.logShapeshifts = GUILayout.Toggle(CheatToggles.logShapeshifts, " 记录变形日志");
 
-        CheatToggles.logVents = GUILayout.Toggle(CheatToggles.logVents, " 记录通风管日志");
+        CheatToggles.logVents = GUILayout.Toggle(CheatToggles.logVents, " 记录管道日志");
+
+        CheatToggles.logTasks = GUILayout.Toggle(CheatToggles.logTasks, " 记录任务日志");
+
+        CheatToggles.logGameState  = GUILayout.Toggle(CheatToggles.logGameState, " 记录游戏状态");
     }
 }
