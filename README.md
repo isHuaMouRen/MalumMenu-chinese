@@ -1,3 +1,9 @@
+# ❗注意❗
+## 因个人原因，汉化版已由 2026-10-12 停止维护，此Github仓库已处于存档状态
+## 未汉化的 [官方版本](https://github.com/scp222thj/MalumMenu) 仍可继续使用
+## 汉化版已经明确停止更新，请不要到汉化版维护者的其他无关内容催更
+## 停止维护前最后支持的游戏版本: **V19**
+
 <p align="center">
   <img src="https://scp222thj.dev/static/images/malumLogo.png">
 </p>
